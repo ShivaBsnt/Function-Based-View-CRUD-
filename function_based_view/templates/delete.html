@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove</title>
+</head>
+<body>
+<div class="container">
+    <form  method="post" action="{% url 'delete' user.id %}">
+        {% csrf_token %}
+        <h1>Are you sure you want to delete? </h1>
+        <input type="submit" value="Delete" class="btn btn-info btn-block">
+    </form>
+</div>
+</body>
+</html>
